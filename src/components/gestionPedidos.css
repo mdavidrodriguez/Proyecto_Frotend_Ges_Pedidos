@@ -1,0 +1,7 @@
+.small-input{
+    width: 400px;
+  }
+  .container-principal{
+    display: flex;
+    flex-direction: column;
+  }
