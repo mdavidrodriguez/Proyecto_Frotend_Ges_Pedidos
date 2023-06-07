@@ -1,10 +1,11 @@
 import Pedidos from "../components/Pedidos";
 import RegistroPedido from "../components/RegistroPedido";
-import { Link,Navigate } from "react-router-dom";
 import { useState } from "react";
 import Productos from "./Productos";
+import { useNavigate } from "react-router-dom";
 
 const GestionPedidos = () => {
+  const navigate = useNavigate();
   const [clienteId, setClienteId] = useState("");
   const [pedidoId, setIdPedido] = useState("");
   const [mostrarProductos, setMostrarProductos] = useState(false); 
@@ -17,6 +18,7 @@ const GestionPedidos = () => {
     setClienteId(""); 
     setIdPedido(""); 
     setMostrarProductos(false);
+    navigate("/finalizar");
   };
 
   return (
@@ -29,7 +31,7 @@ const GestionPedidos = () => {
           <Productos pedidoId={pedidoId} />
         ) : (
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute right-64"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute right-4 -bottom-14"
             onClick={handleMostrarProductos}
           >
             Siguiente

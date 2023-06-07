@@ -153,6 +153,7 @@ const Header = () => {
                     Editar
                   </Button>
                   <Button
+                  className="ml-2"
                     color="danger"
                     onClick={() => eliminarCliente(elemento.idCliente)}
                   >

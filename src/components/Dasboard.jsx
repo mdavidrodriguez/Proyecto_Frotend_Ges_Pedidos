@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import confirmacion from "../assets/PrincipalBienvenida.jpeg";
 
 const Dasboard = () => {
   return (
-    <div>
-        <h1>Hola Bienvenido</h1>
+    <div className="container-principal">
+      <img className="img-confirmacion" src={confirmacion} alt="" />
     </div>
-  )
-}
+  );
+};
 
-export default Dasboard
+export default Dasboard;

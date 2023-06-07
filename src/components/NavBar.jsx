@@ -85,8 +85,7 @@ export function NavBar() {
             })}
 
               <button onClick={handleLogout} className="menu-bars">
-                <span className="text-2xl">Salir</span>
-                <FaIcons.FaSignOutAlt className="text-2xl"/>
+                <FaIcons.FaSignOutAlt className="text-3xl "/>
               </button>
           </ul>
         </nav>

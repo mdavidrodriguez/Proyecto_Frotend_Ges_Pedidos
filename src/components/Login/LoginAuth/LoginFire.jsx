@@ -1,15 +1,10 @@
 import styles from './Login.module.css'
-// import { InputControl } from '../InputControl/InputControl.jsx'
-import axios from 'axios';
-import { useState } from 'react'
+import { InputControl } from '../InputControl/InputControl.jsx'
 import { Link, useNavigate } from 'react-router-dom'
 
 
 export function LoginFire() {
     const navigate = useNavigate();
-
-   
-
     return (
         <div className={styles.container}>
             <form className={styles.innerBox}>

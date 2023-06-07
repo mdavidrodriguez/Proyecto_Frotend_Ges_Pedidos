@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../style/AddProducts.css";
 
+
+
 const AddClientes = ({ crearClientes }) => {
   const [clientes, setClientes] = useState({
     cedula: "",
@@ -106,6 +108,7 @@ const AddClientes = ({ crearClientes }) => {
                 Telefono
             </label> 
             <input 
+            className="p-2 border border-gray-600 rounded-2xl block shadow-2xl"
             type='number'
             name='telefono'
             value={telefono}
@@ -118,6 +121,7 @@ const AddClientes = ({ crearClientes }) => {
                 Email
             </label>
             <input
+            className="p-2 border border-gray-600 rounded-2xl block shadow-2xl"
             type='email'
             name='email'
             value={email}

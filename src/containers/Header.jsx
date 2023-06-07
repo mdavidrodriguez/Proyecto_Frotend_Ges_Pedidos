@@ -157,7 +157,7 @@ const Header = () => {
                 <td>{elemento.cantidad}</td>
                 <td>{elemento.descripcion}</td>
                 <td>
-                  <Button color="primary" onClick={() => seleccionarElemento(elemento)}>
+                  <Button className="mr-3" color="primary" onClick={() => seleccionarElemento(elemento)}>
                     Editar
                   </Button>
                   <Button color="danger" onClick={() => eliminarProducto(elemento.idInventario)}>

@@ -4,12 +4,13 @@ import { Signup } from "../components/Login/Signup/Signup";
 import Dasboard from "../components/Dasboard";
 import GestionPedidos from "../pages/GestionPedidos";
 import { NavBar } from "../components/NavBar";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import ListadoPedidos from "../pages/ListadoPedidos";
-import Header from '../containers/Header'
-import HeaderClientes from '../containers/headerClientes'
+import Header from "../containers/Header";
+import HeaderClientes from "../containers/headerClientes";
+import ConfirmacionPedido from "../pages/ConfirmacionPedido";
 
-export function MyRoutes () {
+export function MyRoutes() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLogin = () => {
@@ -28,19 +29,20 @@ export function MyRoutes () {
 
   return (
     <BrowserRouter>
-       {isLoggedIn && <NavBar onLogout={handleLogout} />}
+      {isLoggedIn && <NavBar onLogout={handleLogout} />}
       <Routes>
-      <Route path="/" element={<Login onLogin={handleLogin} />} />
+        <Route path="/" element={<Login onLogin={handleLogin} />} />
         <Route path="/registro" element={<Signup />} />
         <Route path="/principal" element={<Dasboard />} />
         <Route path="/gestionpedidos" element={<GestionPedidos />} />
         <Route path="/listado" element={<ListadoPedidos />} />
         <Route path="/productos" element={<Header />} />
         <Route path="/clientes" element={<HeaderClientes />} />
+        <Route path="/finalizar" element={<ConfirmacionPedido />} />
 
         {/* <Route path="/regispedidos" element={<RegistroPedido />} /> */}
         {/* <Route path="/productos" element={<Productos />} /> */}
       </Routes>
     </BrowserRouter>
-  )
+  );
 }

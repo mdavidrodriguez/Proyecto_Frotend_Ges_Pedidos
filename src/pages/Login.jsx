@@ -1,9 +1,9 @@
 import styles from "../components/Login/LoginAuth/Login.module.css";
 import { InputControl } from "../components/Login/InputControl/InputControl";
 import { Link,useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -39,14 +39,6 @@ const Login = () => {
     setPassword(value);
   };
 
-  // useEffect(() => {
-  //   const token = localStorage.getItem("token");
-  //   if (token) {
-  //     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-  //   } else {
-  //     navigate("/");
-  //   }
-  // }, []);
 
   return (
     <div className={styles.container}>
@@ -54,7 +46,7 @@ const Login = () => {
         <h1 className="text-black font-bold">Login</h1>
         <InputControl
           label="Username"
-          placeholder="Ingrese su ususario"
+          placeholder="Ingrese su usuario"
           value={username}
           onChange={(e) => validateUsername(e.target.value)}
           isinvalid={isUsernameValid ? "false" : "true"}
@@ -81,7 +73,6 @@ const Login = () => {
       </form>
       <div>
       <h1 className="absolute top-9  text-5xl text-white font-bold text-center">
-  Simplifica tu proceso de pedidos y lleva tu negocio al siguiente nivel
 </h1>
       </div>
     </div>

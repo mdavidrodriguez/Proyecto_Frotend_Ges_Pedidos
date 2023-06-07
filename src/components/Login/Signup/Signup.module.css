@@ -3,10 +3,12 @@
     min-height: 100vh;
     width: 100%;
     display: flex;
-    background-image: url("../../../assets/Principal.png");
-
+    background-image: url("../../../assets/RegistroInicio.jpeg");
     justify-content: flex-start;
     align-items: center;
+    background-position: 0%;
+
+
   }
   
   .innerBox {

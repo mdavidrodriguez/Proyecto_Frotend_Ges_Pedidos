@@ -1,10 +1,9 @@
 import styles from "./Signup.module.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { InputControl } from "../InputControl/InputControl";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { Alert } from "react-bootstrap";
-
 
 export function Signup() {
   const [username, setUsername] = useState("");
@@ -36,20 +35,20 @@ export function Signup() {
       );
       setShowToast(true);
       setToastVariant("success");
-      setToastMessage("Registro Exitosos");
+      setToastMessage("Registro Exitoso");
       setEmail("");
       setPassword("");
       setUsername("");
       setTimeout(() => {
         setShowToast(false);
-      }, 2000)
+      }, 2000);
     } catch (error) {
       setShowToast(true);
       setToastVariant("danger");
       setToastMessage("Registro Fallido");
       console.error("Signup failed!", error.response.data);
       setTimeout(() => {
-        setShowToast(false)
+        setShowToast(false);
       }, 2000);
     }
   };
@@ -72,12 +71,12 @@ export function Signup() {
 
   return (
     <div className={styles.container}>
-       <Alert
+      <Alert
         variant={toastVariant}
         show={showToast}
         onClose={handleCloseToast}
         dismissible
-        style={{position:"absolute", top: "0px"}}
+        style={{ position: "absolute", top: "0px" }}
       >
         <Alert.Heading>{toastMessage}</Alert.Heading>
       </Alert>
@@ -108,10 +107,10 @@ export function Signup() {
           isinvalid={isPasswordValid ? "false" : "true"}
           required
         />
-       
+
         <div className={styles.footer}>
           <button type="submit" className="btn btn-primary">
-            registrarse
+            Registrarse
           </button>
           <p>
             Si ya tienes una Cuenta, Inicia Sesión
@@ -121,10 +120,6 @@ export function Signup() {
           </p>
         </div>
       </form>
-      <div>
-        <h1 className="absolute top-7 text-5xl text-white font-bold text-center">Regístrate ahora y descubre una forma más eficiente y organizada de gestionar tus pedidos</h1>
-        </div>
-     
     </div>
   );
 }
