@@ -7,12 +7,5 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [[require('daisyui')]],
-  darkMode: false,
   
 }
-
-// module.exports = {
-//   //...
-//   plugins: [require("daisyui")],
-// }
