@@ -41,7 +41,7 @@ const AddProducts = ({ crearProductos }) => {
 
     // Enviar el producto al backend
     axios
-      .post("http://localhost:3000/api/v1/inventario", products, {
+      .post("https://backend-gestion-pedidos.onrender.com/api/v1/inventario", products, {
         headers: {
           Authorization: `Bearer ${t}`
         }

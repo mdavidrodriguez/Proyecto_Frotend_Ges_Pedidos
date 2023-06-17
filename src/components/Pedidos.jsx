@@ -23,7 +23,7 @@ const Pedidos = ({ setClienteId }) => {
       const headers = {
         Authorization: `Bearer ${token}`,
       };
-      const res = await axios.get(`http://localhost:3000/api/v1/clientes/${formData.id}`,{ headers });
+      const res = await axios.get(`https://backend-gestion-pedidos.onrender.com/api/v1/clientes/${formData.id}`,{ headers });
       const { idCliente, nombre, direccion, telefono, email } = res.data.data;
       setFormData((prevFormData) => ({
         ...prevFormData,

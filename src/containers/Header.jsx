@@ -21,7 +21,7 @@ const Header = () => {
       const headers = {
         Authorization: `Bearer ${token}`,
       };
-      const response = await axios.get("http://localhost:3000/api/v1/inventario", { headers });
+      const response = await axios.get("https://backend-gestion-pedidos.onrender.com/api/v1/inventario", { headers });
       setProductos(response.data.data);
     } catch (error) {
       console.log(error);
@@ -53,7 +53,7 @@ const Header = () => {
       const headers = {
         Authorization: `Bearer ${token}`,
       };
-      await axios.delete(`http://localhost:3000/api/v1/inventario/${id}`, { headers });
+      await axios.delete(`https://backend-gestion-pedidos.onrender.com/api/v1/inventario/${id}`, { headers });
       const nuevosProductos = productos.filter((producto) => producto.id !== id);
       setProductos(nuevosProductos);
       cargarProductos();
@@ -68,7 +68,7 @@ const Header = () => {
       const headers = {
         Authorization: `Bearer ${token}`,
       };
-      await axios.patch(`http://localhost:3000/api/v1/inventario/${id}`, productoEditado, { headers });
+      await axios.patch(`https://backend-gestion-pedidos.onrender.com/api/v1/inventario/${id}`, productoEditado, { headers });
       const nuevosProductos = productos.map((producto) =>
         producto.id === id ? productoEditado : producto
       );

@@ -17,7 +17,7 @@ const RegistroPedido = ({ clienteId, setIdPedido }) => {
     event.preventDefault();
     try {
       const t = localStorage.getItem("jwt-token");
-      const response = await axios.post(`http://localhost:3000/api/v1/pedidos`, registroPedido,{
+      const response = await axios.post(`https://backend-gestion-pedidos.onrender.com/api/v1/pedidos`, registroPedido,{
         headers: {
           Authorization: `Bearer ${t}`,
         },

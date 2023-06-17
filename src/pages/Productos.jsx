@@ -18,7 +18,7 @@ const Productos = ({ pedidoId }) => {
         const headers = {
           Authorization: `Bearer ${token}`,
         };
-        const response = await axios.get("http://localhost:3000/api/v1/inventario",{headers});
+        const response = await axios.get("https://backend-gestion-pedidos.onrender.com/api/v1/inventario",{headers});
         setTableData(response.data.data);
       } catch (error) {
         console.error(error);
@@ -48,7 +48,7 @@ const Productos = ({ pedidoId }) => {
 
       const t = localStorage.getItem("jwt-token");
       const response = await axios.post(
-        "http://localhost:3000/api/v1/productos",
+        "https://backend-gestion-pedidos.onrender.com/api/v1/productos",
         productos,
         {
           headers: {

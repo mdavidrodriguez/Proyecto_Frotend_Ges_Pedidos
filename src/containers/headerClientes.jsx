@@ -28,7 +28,7 @@ const Header = () => {
         Authorization: `Bearer ${token}`,
       };
       const response = await axios.get(
-        "http://localhost:3000/api/v1/clientes",
+        "https://backend-gestion-pedidos.onrender.com/api/v1/clientes",
         { headers }
       );
       setClientes(response.data.data);
@@ -61,7 +61,7 @@ const Header = () => {
       const headers = {
         Authorization: `Bearer ${token}`,
       };
-      await axios.delete(`http://localhost:3000/api/v1/clientes/${id}`, {
+      await axios.delete(`https://backend-gestion-pedidos.onrender.com/api/v1/clientes/${id}`, {
         headers,
       });
       const nuevosClientes = clientes.filter((cliente) => cliente.id !== id);
@@ -79,7 +79,7 @@ const Header = () => {
         Authorization: `Bearer ${token}`,
       };
       await axios.patch(
-        `http://localhost:3000/api/v1/clientes/${id}`,
+        `https://backend-gestion-pedidos.onrender.com/api/v1/clientes/${id}`,
         clienteEditado,
         { headers }
       );

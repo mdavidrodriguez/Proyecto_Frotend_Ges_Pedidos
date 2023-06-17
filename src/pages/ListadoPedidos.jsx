@@ -16,7 +16,7 @@ const ListadoPedidos = () => {
       const headers = {
         Authorization: `Bearer ${token}`,
       };
-      const response = await axios.get("http://localhost:3000/api/v1/pedidos/listado", { headers });
+      const response = await axios.get("https://backend-gestion-pedidos.onrender.com/api/v1/pedidos/listado", { headers });
       const datosJoin = response.data.data;
       setDatosJoin(datosJoin);
       console.log(datosJoin);

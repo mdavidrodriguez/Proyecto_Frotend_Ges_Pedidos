@@ -18,7 +18,7 @@ const Login = () => {
     e.preventDefault();
     let credentials = { username, password };
     try {
-      const response = await axios.post("http://localhost:3000/api/v1/auth/signin",credentials)
+      const response = await axios.post("https://backend-gestion-pedidos.onrender.com/api/v1/auth/signin",credentials)
       const token = response.data.data.token;
       localStorage.setItem("jwt-token", token);
       console.log(localStorage.getItem("jwt-token"));

@@ -41,7 +41,7 @@ const AddClientes = ({ crearClientes }) => {
     setError(false);
 
     axios
-      .post("http://localhost:3000/api/v1/clientes", clientes, {
+      .post("https://backend-gestion-pedidos.onrender.com/api/v1/clientes", clientes, {
         headers: {
           Authorization: `Bearer ${t}`
         }
